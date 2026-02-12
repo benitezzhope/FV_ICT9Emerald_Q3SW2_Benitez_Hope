@@ -16,6 +16,13 @@
     	background-attachment: fixed;
     }
 
+    ul {
+  list-style: none;
+}
+ul li::before {
+  content: "💌  "
+}
+
 </style>
 
 <div class="container-fluid d-flex align-items-center position-relative"
@@ -41,49 +48,113 @@
 
 <br>
 
-<div class="container" style="background-color: rgb(243, 159, 191); width: 600px; height: 300px; border-radius: 20px; box-shadow: 5px 10px #ec6d9e; text-align: center;">
+<div class="container" style="background-color: rgb(243, 159, 191); width: 800px; height: 300px; border-radius: 20px; box-shadow: 5px 10px #ec6d9e; text-align: center;">
 <h2 style="padding-top: 20px; text-align: center; color: white;">Looking for PRETTY Bouquets?</h2>
 <p style="text-align: center; color: white;">Not to worry! This is the perfect website for you. 💐</p>
 
         <form action="#">
-<label for="budget" style="color: rgb(253, 231, 240); text-align: center;">Get a 20% off discount!</label>
-<input type="number" id="budget" class="form-control" placeholder="Enter budget..." required>
+<label for="budget" style="color: rgb(253, 231, 240); text-align: center;">
+    Get a 20% discount off of your first purchase in <b>Designer Blooms</b>.</label>
+<input type="number" id="bouquetprice" class="form-control" placeholder="Enter selected flower bouquet price..." required>
 <br>
 
-<button type="submit" class="btn btn-info ms-2"  style="background-color: rgb(174, 232, 232);"  onclick="calculate()">Show</button>
+<button type="submit" class="btn btn-info ms-2"  style="background-color: rgb(174, 232, 232);"  
+onclick="calculate()">Show</button>
 <p id="result"></p>
+
 <br>
 
 </div>
 
 <script>
 function calculate() {
-    var budget = Number(document.getElementById('budget').value);
+    var bouquetprice = Number(document.getElementById('bouquetprice').value);
 
-    var discount = 0.20 * budget;
-    var finalPrice = budget - discount;
+    var discount = 0.20 * bouquetprice;
+    var finalPrice = bouquetprice - discount;
 
     document.getElementById("result").innerHTML =
-        "<br><p style='color:#ff297b;'> Final Price: PHP" + finalPrice.toFixed(2) + "</p>";
+        "<br><p style='color:#ff297b;'> Your price will now be: PHP" + finalPrice.toFixed(2) + "! Happy Valentines!! 💝</p>";
 }
 
 </script>
+<!--0.20 times budget is equal to 20% of your budget
+the final price will be your budget minus the discounted 20%-->
 
 <br>
-<div class="row">
-<div class="container col-lg-3" style="background-color: rgb(243, 159, 191); width: 600px; height: 450px; border-radius: 20px; box-shadow: 5px 10px #ec6d9e;">
-<h2 style="padding-top: 20px; text-align: center; color: white;">Recommended Valentines' Flowers</h2>
-<ul>
-<li>Roses</li>
-<d>The most popular choice, specifically red for romance, pink for affection, and white for purity.</d>
-<li>Gerbera</li>
-<li>Peonies</li>
-</ul>
+<div class="row mb-5">
+<div class="container col-lg-3" style="background-color: rgb(245, 191, 212); width: 650px; height: 710px; border-radius: 20px; box-shadow: 5px 10px #ed9ebc;">
+<h2 style="padding-top: 20px; text-align: center; color: rgb(254, 62, 132);">Recommended Valentine's Flowers 💘</h2>
+<ul id="67">
+    
+    <br>
+
+<img src="roses.jpg" style="width: 100px; height: 120px; float: right;">
+<li style="color: #ffffff; font-size: 25px; text-shadow: 2px 2px #ff96b8">Roses</li>
+<d style="color: rgb(207, 129, 150);"
+>The most popular choice, specifically red for romance, pink for affection, and white for purity.</d>
+
+<br><br><br>
+
+<img src="gerberas.jpg" style="width: 100px; height: 120px; float: right;">
+<li style="color: #ffffff; font-size: 25px; text-shadow: 2px 2px #ff96b8">Gerberas</li>
+<d style="color: rgb(207, 129, 150);"
+>Three gerberas symbolize "I love you," where the gesture silently conveys deep romantic feelings, especially when words fail.</d>
+
+<br><br><br>
+
+<img src="carnations.jpg" style="width: 100px; height: 120px; float: right;">
+<li style="color: #ffffff; font-size: 25px; text-shadow: 2px 2px #ff96b8">Carnations</li>
+<d style="color: rgb(207, 129, 150);"
+>Said to symbolise devotion, love and fascination,  they're the perfect swap if you fancy a change from that bouquet of roses for your partner. </d>
+
+<br><br><br>
+
+<img src="peonies.jpg" style="width: 100px; height: 120px; float: right;">
+<li style="color: #ffffff; font-size: 25px; text-shadow: 2px 2px #ff96b8">Peonies</li>
+<d style="color: rgb(207, 129, 150);"
+>Peonies are rich in symbolism, often representing romance, prosperity, and good fortune. Often associated with love and marriage, they're a popular choice for weddings and romantic occasions.</d>
+
+
+
+
+
 
 </div>
-<div class="container col-lg-3" style="background-color: rgb(243, 159, 191); width: 600px; height: 450px; border-radius: 20px; box-shadow: 5px 10px #ec6d9e; text-align: center;">
-<h2 style="padding-top: 20px; text-align: center; color: white;">Recommended Stores</h2>
+<div class="container col-lg-3" style="background-color: rgb(245, 191, 212); width: 650px; height: 710px; border-radius: 20px; box-shadow: 5px 10px #ed9ebc; text-align: center;">
+<h2 style="padding-top: 20px; text-align: center; color: rgb(254, 62, 132);">🏪 Recommended Stores 🌼</h2>
 
+<br>
+
+<img src="designerblooms.png" style="height: 160px; width: 530px;">
+<br><br>
+<ul>
+<li style="color: #ffffff; font-size: 25px; text-shadow: 2px 2px #ff96b8">Designer Blooms</li>
+<d style="color: rgb(207, 129, 150);"
+><b>Taguig City</b> | Marketplace by Rustan's, Basement 1, Bonifacio High St Central Square, Bonifacio Global City Taguig</d>
+<br>
+<a href="https://designerblooms.com.ph/?srsltid=AfmBOoragcIrfVKE3ROveYvDA9Zhkhu2hJD7xwsCfopj9NYX2KdLRzkP" target="_blank" class="button" style="color: #ffeef5;">Check out their website!</a>
+
+<br><br>
+
+<img src="flowerfarm.png" style="height: 160px; width: 530px;">
+<br><br>
+<li style="color: #ffffff; font-size: 25px; text-shadow: 2px 2px #ff96b8">The Flower Farm</li>
+<d style="color: rgb(207, 129, 150);"
+><b>Makati City</b> | G/F, Rci Building 105 Rada Street Makati, 1229 Metro Manila Philippines</d>
+<br>
+<a href="https://theflowerfarm.com/password" target="_blank" class="button" style="color: #ffeef5;">Check out their website!</a>
+</ul>
+
+<!-- Store Locations from Yelp
+ https://bit.ly/4adi6sP
+
+ Flowers from Pinterest
+
+ Background from Pinterest
+ https://ph.pinterest.com/pin/32369691066579208/
+  -->
+</ul>
 </div>
 </div>
 </body>
